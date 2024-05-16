@@ -4,7 +4,7 @@ This project, "Precision Health Initiative," aims to revolutionize healthcare by
 
 The project involves collaboration with healthcare institutions and research organizations to gather comprehensive datasets, apply advanced analytics, and develop a user-friendly interface for healthcare providers to access personalized treatment recommendations.
 
-## Project Plan
+<--## Project Plan
 
 ### 1. Data Collection and Preprocessing:
 - Collaborate with healthcare institutions and research organizations to gather comprehensive datasets containing medical records, genetic information, lifestyle factors, and treatment histories of patients.
@@ -40,7 +40,7 @@ The project involves collaboration with healthcare institutions and research org
 
 ## Contributing
 
-Contributions are welcome! Please refer to the contribution guidelines for more information on how to get involved.
+Contributions are welcome! Please refer to the contribution guidelines for more information on how to get involved. -->
 
 ## License
 
