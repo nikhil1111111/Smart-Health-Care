@@ -1,4 +1,4 @@
-# Precision Health Initiative: Predicting Personalized Treatment Outcomes
+# Precision Health Initiative: Predicting Personalized Treatment 
 
 <!--This project, "Precision Health Initiative," aims to revolutionize healthcare by developing a precision health platform that utilizes machine learning and genomics data to predict personalized treatment outcomes. By combining clinical, genetic, and lifestyle data, we strive to maximize treatment effectiveness and minimize side effects for each individual patient.
 
