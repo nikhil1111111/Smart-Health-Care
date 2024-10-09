@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Healthcare Platform</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        /* Header Section */
+        .navbar {
+            background-color: #007bff;
+            padding: 1rem;
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .nav-link {
+            color: #fff !important;
+            margin-right: 1rem;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #ffcc00 !important;
+        }
+
+        .hero-section {
+            background: linear-gradient(45deg, rgba(0,123,255,0.8), rgba(255,193,7,0.7)), url('https://source.unsplash.com/1600x900/?healthcare') center/cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+        }
+
+        .hero-section h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .hero-section p {
+            font-size: 1.2rem;
+            font-weight: 300;
+        }
+
+        .section-heading {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-top: 2rem;
+            color: #007bff;
+            text-align: center;
+        }
+
+        .container {
+            padding: 3rem 0;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+
+        /* Form Section Styling */
+        form {
+            background-color: #fff;
+            padding: 2rem;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 0.75rem;
+            border: none;
+            background-color: #007bff;
+            color: #fff;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        /* Blog Articles */
+        .blog-article {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background-color: #f9f9f9;
+            border-left: 5px solid #007bff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .blog-article h3 {
+            margin-bottom: 0.75rem;
+            color: #007bff;
+        }
+
+        .blog-article p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .blog-section {
+            padding: 4rem 0;
+            background-color: #f1f1f1;
+        }
+
+        /* Media Queries */
+        @media only screen and (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 3rem;
+            }
+
+            .hero-section p {
+                font-size: 1rem;
+            }
+
+            .navbar-brand {
+                font-size: 1.2rem;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Smart Healthcare</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showSection('blogSection')">Blogs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showSection('diagnostic-tools')">Diagnosis</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showSection('consultation-booking')">Consultation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showSection('healthcare-plan')">Healthcare Plan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showSection('health-data-analysis')">Data Analysis</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1>Welcome to Smart Healthcare</h1>
+            <p>Revolutionizing healthcare with AI-powered tools and personalized services.</p>
+            <a href="#blogSection" class="btn btn-primary mt-3">Explore More</a>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blogSection" class="blog-section container" style="display:none;">
+        <h2 class="section-heading">Health Blogs</h2>
+        <div class="blog-article">
+            <h3>Understanding Diabetes</h3>
+            <p>Diabetes is a chronic condition that affects millions globally. Learn about its symptoms, causes, and management strategies.</p>
+        </div>
+        <div class="blog-article">
+            <h3>Maintaining a Healthy Lifestyle</h3>
+            <p>Discover essential tips on how to maintain a balanced diet, exercise regularly, and manage stress for better health.</p>
+        </div>
+        <div class="blog-article">
+            <h3>AI in Healthcare</h3>
+            <p>Explore how AI technologies are revolutionizing healthcare diagnostics, treatments, and patient management systems.</p>
+        </div>
+    </section>
+
+    <!-- Diagnosis Form Section -->
+    <section id="diagnostic-tools" class="container" style="display:none;">
+        <h2 class="section-heading">AI-Powered Diagnostic Tools</h2>
+
+        <form action="/api/diagnosis" method="POST">
+            <label for="symptoms">Enter Your Symptoms:</label>
+            <input type="text" id="symptoms" name="symptoms" class="form-control mb-3" placeholder="e.g. Headache, fever, nausea">
+            <input type="submit" value="Get Diagnosis">
+        </form>
+        
+    </section>
+
+    <!-- Consultation Booking Form Section -->
+    <!-- <section id="consultation-booking" class="container" style="display:none;">
+        <h2 class="section-heading">Book a Telemedicine Consultation</h2>
+        <form>
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" class="form-control mb-3" placeholder="Enter your name">
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" class="form-control mb-3" placeholder="Enter your email">
+            <label for="date">Select Date:</label>
+            <input type="date" id="date" name="date" class="form-control mb-3">
+            <input type="submit" value="Book Consultation">
+        </form>
+    </section> -->
+    
+    <form action="/api/consultation" method="POST">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" class="form-control mb-3" placeholder="Enter your name">
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" class="form-control mb-3" placeholder="Enter your email">
+        <label for="date">Select Date:</label>
+        <input type="date" id="date" name="date" class="form-control mb-3">
+        <input type="submit" value="Book Consultation">
+    </form>
+    
+    <!-- Healthcare Plan Section -->
+    <section id="healthcare-plan" class="container" style="display:none;">
+        <h2 class="section-heading">Personalized Healthcare Plan</h2>
+        <form>
+            <label for="age">Your Age:</label>
+            <input type="number" id="age" name="age" class="form-control mb-3" placeholder="Enter your age">
+            <label for="goals">Health Goals:</label>
+            <textarea id="goals" name="goals" class="form-control mb-3" rows="4" placeholder="Describe your health goals"></textarea>
+            <input type="submit" value="Get Plan">
+        </form>
+    </section>
+
+    <!-- Data Analysis Section -->
+    <section id="health-data-analysis" class="container" style="display:none;">
+        <h2 class="section-heading">Health Data Analysis</h2>
+        <form>
+            <label for="dataUpload">Upload Health Data:</label>
+            <input type="file" id="dataUpload" name="dataUpload" class="form-control mb-3">
+            <input type="submit" value="Analyze Data">
+        </form>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript to toggle sections -->
+    <script>
+        function showSection(sectionId) {
+            const sections = ['blogSection', 'diagnostic-tools', 'consultation-booking', 'healthcare-plan', 'health-data-analysis'];
+            sections.forEach(section => {
+                document.getElementById(section).style.display = (section === sectionId) ? 'block' : 'none';
+            });
+        }
+    </script>
+
+</body>
+
+</html>

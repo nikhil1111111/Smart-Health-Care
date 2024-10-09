@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Healthcare Platform</title>
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+<body>
+    <header  class="animate__animated animate__fadeInDown"> 
+        <h1>Smart Healthcare Platform</h1>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#diagnosis">Diagnosis</a>
+        <a href="#consultation">Consultation</a>
+        <a href="#healthcare-plan">Healthcare Plan</a>
+        <a href="#data-analysis">Data Analysis</a>
+    </nav>
+
+    <div class="container">
+        <section id="home" class="section">
+            <h2>Welcome to the Smart Healthcare Platform</h2>
+            <p>Your one-stop platform for all healthcare needs.</p>
+        </section>
+
+        <section id="diagnosis" class="section">
+            <h2>Diagnosis</h2>
+            <form action="/diagnosis" method="POST" id="diagnosisForm">
+                <label for="patient_name">Patient Name:</label>
+                <input type="text" id="patient_name" name="patient_name" required>
+                
+                <label for="symptoms">Symptoms:</label>
+                <textarea id="symptoms" name="symptoms" required></textarea>
+                
+                <button type="submit">Submit Diagnosis</button>
+            </form>
+        </section>
+
+        <!-- Similarly add sections for Consultation, Healthcare Plan, and Data Analysis -->
+
+    </div>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

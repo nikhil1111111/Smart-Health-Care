@@ -1,0 +1,49 @@
+/* Body styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+    padding: 20px;
+}
+
+/* Section styling */
+section {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Headers styling */
+h1, h2 {
+    text-align: center;
+    color: #17a2b8;
+}
+
+/* Form input styling */
+form input, form select, form button {
+    margin: 10px 0;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+}
+
+/* Buttons styling */
+button {
+    background-color: #28a745;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Diagnosis Result */
+#diagnosisResult, #bookingResult, #planResult, #dataResult {
+    margin-top: 20px;
+    color: #007bff;
+    font-weight: bold;
+}
